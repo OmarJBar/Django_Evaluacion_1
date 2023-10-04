@@ -56,6 +56,20 @@ def viewPoleras(request):
     
     return render(request, 'views/productTemplate.html', data)
 
+def viewJuguetes(request):
+    data ={"producto1": productTemplate("Juguetes.png", "juguete1"),
+           "producto2": productTemplate("Juguetes.png", "juguete2"),
+           "producto3": productTemplate("Juguetes.png", "juguete3")}
+    
+    return render(request, 'views/productTemplate.html', data)
+
+def viewElectronica(request):
+    data ={"producto1": productTemplate("Electronica1.png", "electronica1"),
+           "producto2": productTemplate("Electronica2.png", "electronica2"),
+           "producto3": productTemplate("Electronica3.png", "electronica3")}
+    
+    return render(request, 'views/productTemplate.html', data)
+
 def productTemplate(imagen, nombre):
     imgUrl = static(f'img/{imagen}')
     return f"""

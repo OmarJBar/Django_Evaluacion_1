@@ -23,4 +23,6 @@ urlpatterns = [
     path('', views.index),
     path('products/', views.vista_form_productos, name="vista_form_productos"),
     path('poleras/', views.viewPoleras),
+    path('electronica/', views.viewElectronica),
+    path('juguetes/', views.viewJuguetes),
 ]
